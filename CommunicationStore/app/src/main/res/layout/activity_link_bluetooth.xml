@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_linked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/listview_linked"
+
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        app:layout_constraintVertical_weight="1"
+        android:textColor="@android:color/darker_gray"
+        android:text="连接过的设备"
+         />
+   <TextView
+        android:id="@+id/btn_sao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/title_linked"
+        app:layout_constraintBottom_toBottomOf="@id/title_linked"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:padding="15dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintDimensionRatio="1:1"
+        />
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/title_linked"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/black"
+        />
+
+    <ListView
+        android:id="@+id/listview_linked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/title_linked"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/space"
+        app:layout_constraintVertical_weight="5"></ListView>
+
+
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="13dp"
+        app:layout_constraintTop_toBottomOf="@id/listview_linked"
+        app:layout_constraintBottom_toTopOf="@id/title_islink"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@android:color/holo_green_dark"
+        />
+
+    <TextView
+        android:id="@+id/title_islink"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/space"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/listview_islink"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        app:layout_constraintVertical_weight="1"
+        android:textColor="@android:color/darker_gray"
+        android:text="可连接的设备"
+        />
+    <TextView
+        android:id="@+id/btn_fresh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/title_islink"
+        app:layout_constraintBottom_toBottomOf="@id/title_islink"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="15dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintDimensionRatio="1:1"
+        />
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/title_islink"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/black"
+        />
+
+    <ListView
+        android:id="@+id/listview_islink"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/title_islink"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="5"></ListView>
+</android.support.constraint.ConstraintLayout>

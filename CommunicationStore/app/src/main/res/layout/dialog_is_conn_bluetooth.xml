@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@android:color/white"
+    >
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/dialog_title"
+        android:layout_alignRight="@id/dialog_title"
+        android:src="@android:drawable/ic_delete"/>
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/dialog_title"
+        android:background="@color/colorPrimary"
+        />
+    <View
+               android:id= "@+id/strut"
+                 android:layout_width= "0dp"
+                android:layout_height= "0dp"
+        android:background="@color/colorPrimary"
+                 android:layout_centerHorizontal="true"
+        android:layout_below="@id/line2"/>
+    <Button
+        android:id="@+id/dialog_conn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@id/line2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignRight="@id/strut"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="连接"/>
+    <Button
+        android:id="@+id/dialog_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_below="@id/line2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignLeft="@id/strut"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="取消"/>
+</RelativeLayout>
+</LinearLayout>

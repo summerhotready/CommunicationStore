@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CommunicationStore</string>
+    <string name="btn_tv_bluetooth">BlueTooth</string>
+    <string name="btn_tv_ble">BLE</string>
+    <string name="btn_tv_socke">Sockte</string>
+    <string name="btn_tv_http">Http</string>
+    <string name="btn_tv_https">Https</string>
+    <string name="btn_tv_nfc">NFC</string>
+
+<!--权限检查-->
+    <string name="notifyTitle">警告</string>
+    <string name="notifyMsg">缺少权限</string>
+    <string name="setting">去设置</string>
+    <string name="cancel">取消</string>
+</resources>

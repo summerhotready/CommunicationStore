@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guoxd.communicationstore">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    <!--6.0以上的系统，我们要加入获取位置权限，不然，搜索不到ble设备的-->
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--除了蓝牙权限外，如果需要BLE feature则还需要声明uses-feature：-->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".nfc.NFCSendActivity"/>
+        <activity android:name=".ble.BlueToothActivity"/>
+        <activity android:name=".bluetoothSample.SampleBlueToothActivity"/>
+        <activity android:name=".http.HttpSendActivity"/>
+        <activity android:name=".https.HttpsAuthActivity"/>
+        <activity android:name=".socket.SocketSendActivity"/>
+
+        <service android:name=".ble.bluetooth.BlueToothService"/>
+
+    </application>
+
+</manifest>
