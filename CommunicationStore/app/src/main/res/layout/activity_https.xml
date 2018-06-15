@@ -3,21 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include layout="@layout/view_https_top"/>
-    <android.support.v4.view.ViewPager
-        android:id="@+id/id_viewpager"
-        android:layout_height="0dp"
-        android:layout_width="fill_parent"
-        android:layout_weight="5"
-        android:background="@color/colorPrimaryDark"/>
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tl_tab"
+    <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        app:tabGravity="center"
-        app:tabIndicatorColor="@color/colorAccent"
-        app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/colorPrimaryDark"
-        app:tabTextColor="@color/colorPrimary" />
+        android:layout_weight="1"></ListView>
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/id_viewpager"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_weight="5"/>-->
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tl_tab"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--app:tabGravity="center"-->
+        <!--app:tabIndicatorColor="@color/colorPrimaryDark"-->
+        <!--app:tabIndicatorHeight="5dp"-->
+        <!--app:tabMode="fixed"-->
+        <!--app:tabSelectedTextColor="@color/colorAccent"-->
+        <!--app:tabTextColor="@color/colorPrimary" />-->
 </LinearLayout>

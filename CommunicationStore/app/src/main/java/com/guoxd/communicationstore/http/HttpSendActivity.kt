@@ -26,6 +26,7 @@ import com.guoxd.communicationstore.http.control.ModleSendListener
  */
 open class HttpSendActivity:AppCompatActivity(){
     var postAddr = "POST"
+    //用于智能聊天
     var getAddr = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=%s"
     val flag1 = "Post"
     val flag2 = "Get"

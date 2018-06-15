@@ -15,10 +15,10 @@ import android.view.ViewGroup
 import android.widget.*
 import com.guoxd.communicationstore.R
 import com.guoxd.communicationstore.basepackage.utils.CheckPermissionUtil
+import com.guoxd.communicationstore.basepackage.utils.SharePreaceUtils
 import com.guoxd.communicationstore.basepackage.utils.ToastUtils
 import com.guoxd.communicationstore.ble.bluetooth.BlueToothService
 import com.guoxd.communicationstore.ble.bluetooth.OnBlueWriteReadListener
-import com.guoxd.communicationstore.ble.utils.ShardUtils
 import java.util.ArrayList
 import java.util.HashMap
 
@@ -108,12 +108,12 @@ open class BlueToothActivity:AppCompatActivity(){
     }
     //
     private fun initData() {
-        val str = ShardUtils.init(this).getString("MAC", "")
+        val str = SharePreaceUtils.init(this).getString("MAC", "")
         if (str != "") {
             val strs = str.split(" ".toRegex()).dropLastWhile({ it.isEmpty() }).toTypedArray()
             for (i in strs.indices) {
                 val mac = strs[i]
-                val name = ShardUtils.init(this).getString(mac, "")
+                val name = SharePreaceUtils.init(this).getString(mac, "")
                 val data = DeviceData(mac, name)
                 mLinkedData.add(data)
             }
